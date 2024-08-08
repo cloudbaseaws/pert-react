@@ -9,7 +9,7 @@ import MenuBar from './MenuBar';
 import TodoList from './Todo';
 import UserStoryInput from './UserStoryInput';
 import UserStoryGenerator from './UserStoryGenerator';
-
+import UserStoryToTodoList from './UserStoryTodoList';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
       <UserStoryInput />
       <h1>List Group box for Stories</h1>
       <UserStoryGenerator />
+      <UserStoryToTodoList />
       
       
     

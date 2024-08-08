@@ -6,9 +6,11 @@ function UserStoryInput() {
   const [benefit, setBenefit] = useState('');
   const [userStory, setUserStory] = useState('');
 
+
   const handleGenerateUserStory = () => {
     const generatedStory = `As a ${role}, I want to ${action}, so that ${benefit}`;
     setUserStory(generatedStory);
+
   };
 
   return (
