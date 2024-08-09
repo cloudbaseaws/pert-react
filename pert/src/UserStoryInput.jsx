@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 
 function UserStoryInput() {
+  const [userStories, setUserStories]= useState([]);
   const [role, setRole] = useState('');
   const [action, setAction] = useState('');
   const [benefit, setBenefit] = useState('');
-  const [userStory, setUserStory] = useState('');
+  let nextId = 1; // Track the next ID for user stories
+ 
 
 
   const handleGenerateUserStory = () => {
-    const generatedStory = `As a ${role}, I want to ${action}, so that ${benefit}`;
-    setUserStory(generatedStory);
+    const generatedStory = { 
+        id: nextId ++,// Increment and use the next Id text:`As a ${role}, I want to ${action}, so that ${benefit}`,
+        };
 
-  };
+    setUserStories([...userStories, generatedStory]);
+    setRole('');
+    setAction('');
+    setBenefit('');
+};
 
   return (
     <div>
@@ -25,8 +32,13 @@ function UserStoryInput() {
       <input type="text" id="benefit" value={benefit} onChange={(e) => setBenefit(e.target.value)} />
 
       <button onClick={handleGenerateUserStory}>Generate User Story</button>
-
-      <p>User Story: {userStory}</p>
+      <ul>
+        {userStories.map((story,index) => (
+        <li key={story.id} > {story.text}
+        </li>
+        ))}
+      </ul>
+      
     </div>
   );
 }

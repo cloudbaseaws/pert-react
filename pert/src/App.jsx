@@ -8,17 +8,16 @@ import MenuBar from './MenuBar';
 
 import TodoList from './Todo';
 import UserStoryInput from './UserStoryInput';
-import UserStoryGenerator from './UserStoryGenerator';
+
 import UserStoryToTodoList from './UserStoryTodoList';
 
 function App() {
   return (
     <div className="App">
       <h1>User Story Generator</h1>
-      <p>As a role I want to action so that I can benefit.</p>
+      <p>As a role I want to action so that benefit.</p>
       <UserStoryInput />
       <h1>List Group box for Stories</h1>
-      <UserStoryGenerator />
       <UserStoryToTodoList />
       
       

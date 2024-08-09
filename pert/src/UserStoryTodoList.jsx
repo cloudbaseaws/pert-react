@@ -5,8 +5,8 @@ function UserStoryToTodoList() {
   const [todoList, setTodoList] = useState([]);
 
   const handleGenerateTodoList = () => {
-    // Logic to analyze user story and generate to-do items
-    const generatedTodos = []; // Placeholder for generated to-do items
+    // Logic to analyze user story and generate to-do items (replace placeholder)
+    const generatedTodos = ['To-do item 1', 'To-do item 2', 'To-do item 3'];
     setTodoList(generatedTodos);
   };
 
@@ -15,7 +15,13 @@ function UserStoryToTodoList() {
       <label htmlFor="userStory">User Story:</label>
       <input type="text" id="userStory" value={userStory} onChange={(e) => setUserStory(e.target.value)} />
       <button onClick={handleGenerateTodoList}>Generate To-Do List</button>
-      {/* Display the generated to-do list */}
+      {todoList.length > 0 && (
+        <ul>
+          {todoList.map((todoItem, index) => (
+            <li key={index}>{todoItem}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

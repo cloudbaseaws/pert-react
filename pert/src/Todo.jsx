@@ -24,7 +24,7 @@ function TodoList() {
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>
-            <input type="checkbox" checked={todo.completed} onChange={() => handleComplete(index)} />
+            <input type="groupbox" checked={todo.completed} onChange={() => handleComplete(index)} />
             {todo.text}
             <button onClick={() => handleDelete(index)}>Delete</button>
           </li>
