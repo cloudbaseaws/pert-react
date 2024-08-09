@@ -14,7 +14,7 @@
 }
 
 a {
-  font-weight: 500;
+  font-weight: 600;
   color: #646cff;
   text-decoration: inherit;
 }
@@ -23,10 +23,10 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 10000;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 420px;
   min-height: 100vh;
 }
 
@@ -43,11 +43,11 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
-  cursor: pointer;
+  cursor: crosshair;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #ff6469;
 }
 button:focus,
 button:focus-visible {

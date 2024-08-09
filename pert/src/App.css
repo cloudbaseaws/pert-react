@@ -1,8 +1,11 @@
 #root {
   max-width: 1280px;
-  margin: 55 auto;
-  padding: 2rem;
-  text-align: center;
+  margin: 5555 auto;
+  margin-top: 30 auto;
+  margin-left: 50 auto;
+
+  padding: 60 rem;
+  text-align: right;
 }@media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -14,5 +17,5 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #191820;
 }
